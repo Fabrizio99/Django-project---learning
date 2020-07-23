@@ -19,14 +19,11 @@ layout="""
     <hr>
 """
 def index(request):
-    #*mensaje="""
-    #   <h1>Inicio</h1>
-    #"""
-    return HttpResponse(request,'index.html')
+    return render(request,'index.html')
 
 def saludo(request):
     
-    return HttpResponse(request,'saludo.html')
+    return render(request,'saludo.html')
 
 def rango(request):
     a = 10
