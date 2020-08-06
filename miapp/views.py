@@ -4,7 +4,7 @@ from django.shortcuts import render,HttpResponse,redirect
 layout="""
 """
 def index(request):
-    estudiantes = []
+    estudiantes = ['Alumno 1','Alumno 2','Alumno 3']
     return render(request,'index.html',{
         'titulo'      : 'Inicio',
         'mensaje'     : 'Proyecto Web con Django (Desde el View)',

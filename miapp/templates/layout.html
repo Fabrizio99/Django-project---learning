@@ -22,13 +22,13 @@
     <nav>
         <ul>
             <li>
-                <a href="/inicio">Inicio</a>
+                <a href="{% url 'inicio'%}">Inicio</a>
             </li>
             <li>
-                <a href="/saludo">Mensaje de Saludo</a>
+                <a href="{% url 'saludo'%}">Mensaje de Saludo</a>
             </li>
             <li>
-                <a href="/rango">Mostrar los números</a>
+                <a href="{% url 'rango'%}">Mostrar los números</a>
             </li>
         </ul>
     </nav>
@@ -46,7 +46,7 @@
         </div>
     </div>
     <footer>
-        UNTELS - LP3 &COPY; Fabrizio Condori
+        UNTELS - LP3 &COPY; Fabrizio Condori - {% now "d/m/y h:m:s" %}
     </footer>
     
 </body>

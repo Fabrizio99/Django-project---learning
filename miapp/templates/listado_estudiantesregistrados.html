@@ -1,0 +1,13 @@
+<hr>
+<hr>
+<hr>
+<p><strong>{{encabezado}} (Método 01: Imprime lista)</strong></p>
+{{estudiantes}}
+<p><strong>{{encabezado}} (Método 02: Imprime lista usando for)</strong></p>
+<ul reverse>
+    {% for estudiante in estudiantes %}
+        <li>{{forloop.counter}}.   {{estudiante}}</li>
+    {% empty %}
+        <p>No hay estudiantes registrados</p>
+    {% endfor %}
+</ul>
