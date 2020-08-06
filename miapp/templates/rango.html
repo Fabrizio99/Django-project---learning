@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block title %}
+    {{titulo}}
+{% endblock %}
+{% block content %}
+{{block.super}}
+<h1 class="title">Rango</h1>
+<p>A = {{a}}</p>
+<p>B = {{b}}</p>
+
+<ul>
+{% for numero in rango_numeros %}
+<li>{{numero}}</li>
+{% endfor %}
+</ul>
+{% endblock %}

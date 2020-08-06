@@ -1,12 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Inicio</h1>
-    <h2>Desde el template</h2>
-</body>
-</html>
+{% extends 'layout.html' %}
+{% block title %}
+    {{titulo}}
+{% endblock %}
+
+{% block content %}
+{% comment 'Datos de la página Index'%}
+    En esta página se mostrará la página inicial
+{% endcomment%}
+<h1 class="title">Página {{titulo}}</h1>
+<h2>Desde el template</h2>
+<p>Usando Templates</p>
+{% if mensaje %}
+<p>Mensaje: {{mensaje}}</p>
+{% else %}
+<strong>El mensaje no tiene contenido</strong>
+{% endif %}
+<p><strong>Estudiantes Registrados (Método 01: Imprime lista)</strong></p>
+{{estudiantes}}
+<p><strong>Estudiantes Registrados (Método 02: Imprime lista usando for)</strong></p>
+<ul reverse>
+{% for estudiante in estudiantes %}
+<li>{{forloop.counter}}.   {{estudiante}}</li>
+{% empty %}
+<p>No hay estudiantes registrados</p>
+{% endfor %}
+</ul>
+<p>Año 2020</p>
+{% endblock %}
