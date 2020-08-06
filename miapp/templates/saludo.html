@@ -3,8 +3,9 @@
     {{titulo}}
 {% endblock %}
 {% block content %}
-{{block.super}}
-<h1 class="title">Bienvenidos</h1>
-<h2>{{nombre_autor}}</h2>
-<h3>Lenguaje de Programación III</h3>
+    <h1 class="title">Bienvenidos</h1>
+    <h2>{{nombre_autor}}</h2>
+    {% load filters %}
+    <p>{{"Iniciando curso LP3"|saludo|safe}}</p>
+    <p>{{block.super}}</p>
 {% endblock %}
